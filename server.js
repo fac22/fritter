@@ -12,7 +12,12 @@ server.get('/', (request, response) => {
   // }
 
   messages = Object.values(frits)
-    .map((frit) => `<h1>${frit.message} - ${frit.user}</h1>`)
+    .map(
+      (frit) => `<h3>${frit.message} - ${frit.user}</h3>
+    <form action="/deletefrit" method="POST">
+    <button name="deleteButton" value="${frit.time}">X</button>
+    </form>`
+    )
     .join('');
 
   response.send(html(messages));
@@ -26,12 +31,19 @@ server.post('/', bodyParser, (request, response) => {
   const newFritName = request.body.name;
 
   const newFrit = {
-    user: newFritName,
+    user: newFritName || 'annonymouse 🐭',
     message: newFritMessage,
     time: new Date(),
   };
 
-  frits[Object.keys(frits).length] = newFrit;
+  frits[new Date()] = newFrit;
+  console.log(frits);
+  response.redirect('/');
+});
+
+server.post('/deletefrit', bodyParser, (request, response) => {
+  const fritToDelete = request.body.deleteButton;
+  delete frits[fritToDelete];
   console.log(frits);
   response.redirect('/');
 });

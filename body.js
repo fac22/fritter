@@ -37,11 +37,17 @@ const htmlImport = function (input) {
 </head>
 
 <body>
+<h1>Fritter</h1>
+<h2>Fritter your life away</h2>
 <form method="POST">
 <label id="name">Name</label>
-<input id="name" type="text" name="name">
-<label id="message">My Frit</label>
-<input id="message" required="required" type="text" name="message" >
+
+<input id="name" type="text" name="name" >
+<label id="message1">My Frit</label>
+
+<input id="message" type="text" name="message" placeholder="Enter your frit" required
+                            title="Please enter your name 🙂"   oninvalid="this.setCustomValidity('Enter User Name Here 🧱')"
+  oninput="this.setCustomValidity('')">
 
 <button>Send Message</button>
 </form>
