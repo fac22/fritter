@@ -7,9 +7,13 @@ const server = express();
 
 server.get('/', (request, response) => {
   let messages = '';
-  for (const frit of Object.values(frits)) {
-    messages += `<h1>${frit.message}</h1>`;
-  }
+  // for (const frit of Object.values(frits)) {
+  //   messages += `<h1>${frit.message}</h1>`;
+  // }
+
+  messages = Object.values(frits)
+    .map((frit) => `<h1>${frit.message}</h1>`)
+    .join('');
 
   response.send(html(messages));
 });
