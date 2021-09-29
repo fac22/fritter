@@ -12,7 +12,12 @@ const html = `
 </head>
 
 <body>
-    <p>hello 🐞 </p>
+<form method="POST">
+<label id="message">My Frits</label>
+<input id="message" type="text" name="message">
+
+<button>Send Message</button>
+</form>
 </body>
 
 </html>
