@@ -38,8 +38,10 @@ const htmlImport = function (input) {
 
 <body>
 <form method="POST">
-<label id="message">My Frits</label>
-<input id="message" type="text" name="message">
+<label id="name">Name</label>
+<input id="name" type="text" name="name">
+<label id="message">My Frit</label>
+<input id="message" required="required" type="text" name="message" >
 
 <button>Send Message</button>
 </form>

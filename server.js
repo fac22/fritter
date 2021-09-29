@@ -12,7 +12,7 @@ server.get('/', (request, response) => {
   // }
 
   messages = Object.values(frits)
-    .map((frit) => `<h1>${frit.message}</h1>`)
+    .map((frit) => `<h1>${frit.message} - ${frit.user}</h1>`)
     .join('');
 
   response.send(html(messages));
@@ -23,9 +23,10 @@ const bodyParser = express.urlencoded({ extended: false });
 server.post('/', bodyParser, (request, response) => {
   // Collects new frit message
   const newFritMessage = request.body.message;
+  const newFritName = request.body.name;
 
   const newFrit = {
-    user: 'example',
+    user: newFritName,
     message: newFritMessage,
     time: new Date(),
   };
