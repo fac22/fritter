@@ -5,6 +5,8 @@ const frits = require('./frits.js');
 const html = require('./body.js');
 const server = express();
 
+server.use(express.static('./public'));
+
 server.get('/', (request, response) => {
   let messages = '';
   // for (const frit of Object.values(frits)) {
