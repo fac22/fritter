@@ -6,12 +6,27 @@ const html = require('./body.js');
 const server = express();
 
 server.get('/', (request, response) => {
-  console.log(frits);
   let messages = '';
   for (const frit of Object.values(frits)) {
     messages += `<h1>${frit.message}</h1>`;
   }
-  response.send(messages);
+  response.send(html);
+});
+
+const bodyParser = express.urlencoded({ extended: false });
+
+server.post('/', bodyParser, (request, response) => {
+  // Collects new frit message
+  const newFritMessage = request.body.message;
+  const newFrit = {
+    user: 'example',
+    message: newFritMessage,
+    time: new Date(),
+  };
+
+  frits[Object.keys(frits).length] = newFrit;
+  console.log(frits);
+  response.redirect('/');
 });
 
 const PORT = 3333;
