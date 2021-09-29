@@ -50,5 +50,5 @@ server.post('/deletefrit', bodyParser, (request, response) => {
   response.redirect('/');
 });
 
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 server.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
