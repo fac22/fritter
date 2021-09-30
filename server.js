@@ -15,10 +15,32 @@ server.get('/', (request, response) => {
 
   messages = Object.values(frits)
     .map(
-      (frit) => `<h3>${frit.message} - ${frit.user}</h3>
-    <form action="/deletefrit" method="POST">
-    <button name="deleteButton" value="${frit.time}">X</button>
-    </form>`
+      (frit) => `
+    <article class="flex flex--column border padding-2rem background--grey">
+    <div class="
+          flex
+          flex--row
+          flex--justify-space-between
+          flex--align-items-center
+        ">
+      <div class="flex flex--row flex--align-items-center">
+        <img src="https://thispersondoesnotexist.com/image" />
+        <h3>${frit.user}</h3>
+      </div>
+      <time>${frit.time}</time>
+    </div>
+    <div class="flex flex--row flex--justify-space-between">
+      <p class="padding-top-bottom-1rem ">
+      ${frit.message}
+      </p>
+      <form action="/deletefrit" method="POST" class="flex--align-self-end">
+        <button name="deleteButton" value="${frit.time}" aria-label="Delete Frit"
+          class="dustbin box__button">🗑</button>
+      </form>
+    </div>
+  </article>
+
+    `
     )
     .join('');
 
