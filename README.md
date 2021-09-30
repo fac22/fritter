@@ -59,7 +59,7 @@ Font - [`Fira Code`](https://github.com/tonsky/FiraCode)
 - [x] Desktop version tested on Firefox, Chrome and Edge
 - [x] 100 accessibility point score on `lighthouse`
 
-      ![Lighthouse](readme/lighthouse.PNG)
+![Lighthouse](readme/lighthouse.PNG)
 
 ### ⏳ Future improvements
 
