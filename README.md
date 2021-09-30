@@ -4,6 +4,8 @@
 
 Font - [`Fira Code`](https://github.com/tonsky/FiraCode)
 
+[`Deployed version here`](https://morning-brushlands-70802.herokuapp.com/)
+
 ### 🧱 Features
 
 - Post 100 character `Frits`
