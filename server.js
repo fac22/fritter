@@ -16,7 +16,7 @@ server.get('/', (request, response) => {
   messages = Object.values(frits)
     .map(
       (frit) => `
-    <article class="flex flex--column border padding-2rem background--grey">
+    <article class="flex flex--column border padding-2rem background--grey margin-top-2rem">
     <div class="
           flex
           flex--row
@@ -24,17 +24,21 @@ server.get('/', (request, response) => {
           flex--align-items-center
         ">
       <div class="flex flex--row flex--align-items-center">
-        <img src="https://thispersondoesnotexist.com/image" />
+        <img src="https://thispersondoesnotexist.com/image" alt="profile picture of ${
+          frit.user
+        }"/>
         <h3>${frit.user}</h3>
       </div>
-      <time>${frit.time}</time>
+      <time>${frit.time.toISOString().slice(0, 10)}</time>
     </div>
     <div class="flex flex--row flex--justify-space-between">
       <p class="padding-top-bottom-1rem ">
       ${frit.message}
       </p>
       <form action="/deletefrit" method="POST" class="flex--align-self-end">
-        <button name="deleteButton" value="${frit.time}" aria-label="Delete Frit"
+        <button name="deleteButton" value="${
+          frit.time
+        }" aria-label="Delete Frit"
           class="dustbin box__button">🗑</button>
       </form>
     </div>

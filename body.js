@@ -47,7 +47,7 @@ const htmlImport = function (input) {
 
 <body class="flex flex--column">
   <header class="flex flex--row flex--justify-center margin-top-2rem">
-    <img width="80px" height="40px" src="./public/fritter-logo.png" alt="" class="waffle">
+    <img width="80px" height="40px" src="fritter-logo.png" alt="Fritter logo of a yellow pixel art waffle" class="waffle">
     <h1>Fritter</h1>
     <!-- <h2>Fritter your life away</h2> -->
   </header>
@@ -63,8 +63,8 @@ const htmlImport = function (input) {
           <label id="message1" class="hidden " for="message">My Frit</label>
 
           <textarea id="message" class="border " type="text" maxlength="100" name="message"
-            placeholder="Enter your frit" required title="Please enter your name 🙂"
-            oninvalid="this.setCustomValidity('Enter User Name Here 🧱')"
+            placeholder="Enter your frit" required title="Please enter a Frit"
+            oninvalid="this.setCustomValidity('Please enter a Frit')"
             oninput="this.setCustomValidity('')"></textarea>
         </div>
 
