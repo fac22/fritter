@@ -11,13 +11,13 @@ Font - [`Fira Code`](https://github.com/tonsky/FiraCode)
 - `Frits` stays on page after page `reload`
 - `Frits` can be deleted
 - `Frits` only stay on server for 30 minutes of inactivity
-- `Frits` are cool
 - `Frits` is fully server side - no client side code
 - `CSS` & `favicon` are statically served
 - Deployed to `Heroku`
 - `Waffles` rotates on hover
+- `Frits` are cool
 
-### 📚 What I learnt
+### 📚 What we learnt
 
 - Write full application in `Node.js`
 - Fully server side
@@ -27,14 +27,16 @@ Font - [`Fira Code`](https://github.com/tonsky/FiraCode)
 - How to test with `cypress`
 - How to use `BEM` principles in group project
 - How to code as a team
+- Nothing is perfect
+  ![Lighthouse](readme/lighthouse.png)
 
 ### 🦺 Testing
 
 - [x] Five multi-stage `Cypress` tests complete
-- [x] 100 accessibility point score on `lighthouse`
 - [x] Tested in Mobile developer mode on Firefox, Chrome and Edge
 - [x] Tested on Apple iPhone 6/7/8
 - [x] Desktop version tested on Firefox, Chrome and Edge
+- [x] 100 accessibility point score on `lighthouse`
 
 ### ⏳ Future improvements
 
@@ -43,10 +45,10 @@ Font - [`Fira Code`](https://github.com/tonsky/FiraCode)
 - [ ] Database to store `frits`
 - [ ] Dark-mode
 - [ ] Different profile images for each user
-- [ ] Option share single `frit`
+- [ ] Option to share single `frit`
 - [ ] Reverse order for tweets
 
 ### 👀 Screenshots
 
 ![Mobile](readme/mobile-fritter1.png)
-![Mobile](readme/desktop-fritter.png)
+![Desktop](readme/desktop-fritter.png)
