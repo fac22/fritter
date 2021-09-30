@@ -17,24 +17,26 @@
 </head>
 
 <body class="flex flex--column">
-  <header class="flex flex--column margin-top-2rem">
+  <header class="flex flex--row flex--justify-center margin-top-2rem">
+    <img width="80px" height="40px" src="./public/fritter-logo.png" alt="">
     <h1>Fritter</h1>
     <!-- <h2>Fritter your life away</h2> -->
   </header>
   <main>
     <section class="write-frits">
       <form method="POST">
-        <div class="flex flex--row border ">
-          <label id="name">Name</label>
-          <input id="name" type="text" name="name" />
+        <div class="flex flex--row ">
+          <label id="name" class="border ">Name</label>
+          <input id="name" type="text" name="name" class="border " />
         </div>
 
-        <div class="flex flex--row border">
-          <label id="message1">My Frit</label>
+        <div class="flex flex--row margin-top-2rem">
+          <label id="message1" class="border ">My Frit</label>
 
-          <input id="message" type="text" name="message" placeholder="Enter your frit" required
-            title="Please enter your name 🙂" oninvalid="this.setCustomValidity('Enter User Name Here 🧱')"
-            oninput="this.setCustomValidity('')" />
+          <textarea id="message" class="border " type="text" maxlength="100" name="message"
+            placeholder="Enter your frit" required title="Please enter your name 🙂"
+            oninvalid="this.setCustomValidity('Enter User Name Here 🧱')"
+            oninput="this.setCustomValidity('')"></textarea>
         </div>
 
         <button>Send Message</button>
@@ -42,7 +44,7 @@
     </section>
 
     <section>
-      <article class="flex flex--column border padding-2rem">
+      <article class="flex flex--column border padding-2rem background--grey">
         <div class="
               flex
               flex--row
@@ -61,7 +63,7 @@
             stepped into a war with the Cabal on Mars.
           </p>
           <form action="/deletefrit" method="POST" class="flex--align-self-end">
-            <button name="deleteButton" value="${frit.time}">X</button>
+            <button name="deleteButton" value="${frit.time}">🗑</button>
           </form>
         </div>
       </article>
