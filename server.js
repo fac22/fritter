@@ -27,7 +27,7 @@ server.get('/', (request, response) => {
         <img src="https://thispersondoesnotexist.com/image" alt="profile picture of ${
           frit.user
         }"/>
-        <h3>${frit.user}</h3>
+        <h2>${frit.user}</h2>
       </div>
       <time>${frit.time.toISOString().slice(0, 10)}</time>
     </div>

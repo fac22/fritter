@@ -49,7 +49,6 @@ const htmlImport = function (input) {
   <header class="flex flex--row flex--justify-center margin-top-2rem">
     <img width="80px" height="40px" src="fritter-logo.png" alt="Fritter logo of a yellow pixel art waffle" class="waffle">
     <h1>Fritter</h1>
-    <!-- <h2>Fritter your life away</h2> -->
   </header>
   <main>
     <section class="write-frits">
