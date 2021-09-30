@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRITTER</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="./public/styles.css" />
-  </head>
 
-  <body class="flex flex--column">
-    <header class="flex flex--column">
-      <h1>Fritter</h1>
-      <h2>Fritter your life away</h2>
-    </header>
-    <main>
-      <section>
-        <form method="POST">
-          <div class="flex flex--row">
-            <label id="name">Name</label>
-            <input id="name" type="text" name="name" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRITTER</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="./public/styles.css" />
+</head>
 
-          <div class="flex flex--row">
-            <label id="message1">My Frit</label>
+<body class="flex flex--column">
+  <header class="flex flex--column margin-top-2rem">
+    <h1>Fritter</h1>
+    <!-- <h2>Fritter your life away</h2> -->
+  </header>
+  <main>
+    <section class="write-frits">
+      <form method="POST">
+        <div class="flex flex--row border ">
+          <label id="name">Name</label>
+          <input id="name" type="text" name="name" />
+        </div>
 
-            <input
-              id="message"
-              type="text"
-              name="message"
-              placeholder="Enter your frit"
-              required
-              title="Please enter your name 🙂"
-              oninvalid="this.setCustomValidity('Enter User Name Here 🧱')"
-              oninput="this.setCustomValidity('')"
-            />
-          </div>
+        <div class="flex flex--row border">
+          <label id="message1">My Frit</label>
 
-          <button>Send Message</button>
-        </form>
-      </section>
+          <input id="message" type="text" name="message" placeholder="Enter your frit" required
+            title="Please enter your name 🙂" oninvalid="this.setCustomValidity('Enter User Name Here 🧱')"
+            oninput="this.setCustomValidity('')" />
+        </div>
 
-      <section>
-        <article class="flex flex--column">
-          <div
-            class="
+        <button>Send Message</button>
+      </form>
+    </section>
+
+    <section>
+      <article class="flex flex--column border padding-2rem">
+        <div class="
               flex
               flex--row
               flex--justify-space-between
               flex--align-items-center
-            "
-          >
-            <div class="flex flex--row flex--align-items-center">
-              <img src="https://thispersondoesnotexist.com/image" />
-              <h3>Moomin</h3>
-            </div>
-            <time>16/09/2021</time>
+            ">
+          <div class="flex flex--row flex--align-items-center">
+            <img src="https://thispersondoesnotexist.com/image" />
+            <h3>Moomin</h3>
           </div>
-          <div class="flex flex--row flex--justify-space-between">
-            <p>
-              Big shout-out to all my frits. Whether we wanted it or not, we've
-              stepped into a war with the Cabal on Mars. So let's get to taking
-              out their command, one by one. Valus Ta'aurc. From what I can
-              gather he commands the Siege Dancers from an Imperial Land Tank
-              outside of Rubicon. He's well protected, but with the right team,
-              we can punch through those defences, take this beast out, and
-              break their grip of Freehold.
-            </p>
-            <form
-              action="/deletefrit"
-              method="POST"
-              class="flex--align-self-end"
-            >
-              <button name="deleteButton" value="${frit.time}">X</button>
-            </form>
-          </div>
-        </article>
-      </section>
-    </main>
-  </body>
+          <time>16/09/2021</time>
+        </div>
+        <div class="flex flex--row flex--justify-space-between">
+          <p class="padding-top-bottom-1rem ">
+            Big shout-out to all my frits. Whether we wanted it or not, we've
+            stepped into a war with the Cabal on Mars.
+          </p>
+          <form action="/deletefrit" method="POST" class="flex--align-self-end">
+            <button name="deleteButton" value="${frit.time}">X</button>
+          </form>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+
 </html>
