@@ -1,6 +1,6 @@
 'use strict';
 
-it('can navigate pages', () => {
+it('can check the server is running', () => {
   cy.visit('/');
 });
 
