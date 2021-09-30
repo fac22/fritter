@@ -54,7 +54,7 @@ const htmlImport = function (input) {
     <section class="write-frits">
       <form method="POST">
         <div class="flex flex--row ">
-          <label id="name" class="hidden" for="name">Name</label>
+          <label class="hidden" for="name">Name</label>
           <input id="name" type="text" name="name" class="border text-size " placeholder="Name" />
         </div>
 
