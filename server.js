@@ -1,18 +1,19 @@
 'use strict';
 
+// Variable Declarations
 const express = require('express');
 const frits = require('./frits.js');
 const html = require('./body.js');
 const server = express();
 
+// Static file location
 server.use(express.static('./public'));
 
+// Home root GET request (when client visits site)
 server.get('/', (request, response) => {
   let messages = '';
-  // for (const frit of Object.values(frits)) {
-  //   messages += `<h1>${frit.message}</h1>`;
-  // }
-
+  // Loop through messages Object
+  // Apply HTML (with Object.values i.e ${frit.message}) and insert into HTML function
   messages = Object.values(frits)
     .map(
       (frit) => `
@@ -46,13 +47,17 @@ server.get('/', (request, response) => {
 
     `
     )
+    .reverse()
     .join('');
 
+  // Call html function with full message string
   response.send(html(messages));
 });
 
+// Middleware - collect post in entirety
 const bodyParser = express.urlencoded({ extended: false });
 
+// Post New Frit
 server.post('/', bodyParser, (request, response) => {
   // Collects new frit message
   const newFritMessage = request.body.message;
@@ -63,16 +68,16 @@ server.post('/', bodyParser, (request, response) => {
     message: newFritMessage,
     time: new Date(),
   };
-
+  // Use Date/Time as unique ID for each Frit
+  // Potential bug if two or more users post at the exact same time
   frits[new Date()] = newFrit;
-  console.log(frits);
   response.redirect('/');
 });
 
+// Delete Frit
 server.post('/deletefrit', bodyParser, (request, response) => {
   const fritToDelete = request.body.deleteButton;
   delete frits[fritToDelete];
-  console.log(frits);
   response.redirect('/');
 });
 
