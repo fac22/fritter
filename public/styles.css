@@ -1,4 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: rgb(0, 0, 216);
+  --red: rgb(211, 0, 0);
+  --pink: rgb(255, 197, 197);
+  --yellow: rgb(255, 255, 206);
+  --purple: rgb(69, 0, 197);
+  --green: rgb(0, 255, 0);
+}
+
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
+
+code {
+  font-family: 'Fira Code', monospace;
+}
+
+@supports (font-variation-settings: normal) {
+  code {
+    font-family: 'Fira Code VF', monospace;
+  }
+}
+
+html {
+  background-color: rgb(37, 37, 37);
+  color: rgb(255, 255, 255);
+  font-family: 'Fira Code VF';
+}
+
 body {
-  background-color: black;
-  color: white;
+}
+
+header {
+}
+
+time {
+  border: blue 1px solid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--justify-space-between {
+  justify-content: space-between;
+}
+
+.flex--align-items-center {
+  align-items: center;
+}
+
+.flex--align-self-end {
+  align-self: flex-end;
+}
+
+img {
+  width: 2rem;
 }
