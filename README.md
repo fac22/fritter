@@ -48,5 +48,5 @@ Font - [`Fira Code`](https://github.com/tonsky/FiraCode)
 
 ### 👀 Screenshots
 
-![Mobile](readme/mobile-fritter.png)
+![Mobile](readme/mobile-fritter1.png)
 ![Mobile](readme/desktop-fritter.png)
